@@ -1,29 +1,30 @@
-// src/components/Footer.jsx
-"use client"; // This component needs to be a Client Component because it uses Framer Motion.
-
-import { motion } from 'framer-motion';
-
 export default function Footer() {
   return (
-    // Animate the footer to slide up and fade in
-    <motion.footer
-      initial={{ y: 50, opacity: 0 }} // Initial state: off-screen bottom, invisible
-      animate={{ y: 0, opacity: 1 }}   // Animate to: on-screen, visible
-      transition={{ duration: 0.5, delay: 0.8 }} // Animation duration and delay
-      className="bg-gray-900 text-white py-8 mt-16 shadow-inner" // Subtle inner shadow
-    >
-      <div className="container mx-auto text-center">
-        <p className="text-lg font-semibold">&copy; {new Date().getFullYear()} Green Coffee. Semua Hak Dilindungi.</p>
-        <p className="mt-4 text-sm text-gray-400">Temukan tempat peristirahatan bintang lima Anda.</p>
-        <div className="flex justify-center space-x-6 mt-4">
-          <a href="#" className="text-gray-400 hover:text-green-500 transition-colors">
-            Kebijakan Privasi
-          </a>
-          <a href="#" className="text-gray-400 hover:text-green-500 transition-colors">
-            Syarat & Ketentuan
-          </a>
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>Green Coffee</h3>
+            <p>Experience the finest coffee culture in our premium rooms. Where every stay is a journey through the world of exceptional coffee.</p>
+          </div>
+          <div className="footer-section">
+            <h3>Contact Info</h3>
+            <p>📧 info@greencoffee.com</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>📍 123 Coffee Street, Bean City</p>
+          </div>
+          <div className="footer-section">
+            <h3>Quick Links</h3>
+            <p><a href="#rooms">Our Rooms</a></p>
+            <p><a href="#about">About Us</a></p>
+            <p><a href="#contact">Contact</a></p>
+            <p><a href="#booking">Book Now</a></p>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>&copy; 2024 Green Coffee. All rights reserved. Made with ☕ and ❤️</p>
         </div>
       </div>
-    </motion.footer>
-  );
+    </footer>
+  )
 }
